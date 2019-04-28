@@ -1,11 +1,11 @@
 /**
- * shitty logger class
+ * logger class
  */
 export default new class VueSocketIOLogger {
 
     constructor() {
         this.debug = false;
-        this.prefix = '%cVue-Socket.io: ';
+        this.prefix = '%cvue-stomp-websocket: ';
     }
 
     info(text, data = '') {
