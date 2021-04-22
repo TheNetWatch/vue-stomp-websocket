@@ -1,4 +1,3 @@
-
 export default class VueStompWebSocketListener {
 
     /**
@@ -38,8 +37,8 @@ export default class VueStompWebSocketListener {
 
             this.onEvent(event, args)
         };
-
-        VueStompWebSocketListener.staticEvents.forEach(event => this.stompClient.on(event, args => this.onEvent(event, args)))
+        // this adds all the socket.io reserved event keywords, we aren't using socket.io
+        //VueStompWebSocketListener.staticEvents.forEach(event => this.stompClient.onevent(event))
     }
 
     /**
